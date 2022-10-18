@@ -20,22 +20,63 @@ export default new Router({
 			}
 		}
 	},
-	routes: [{
+	routes: [
+		{//首页
 			path: '/',
 			component: resolve => require(['../pages/Home.vue'], resolve),
 			meta: {
 				auth: true
 			},
 			name: 'Home'
-		}, //首页
-		{
+		}, 
+		{//首页
 			path: '/Home',
 			component: resolve => require(['../pages/Home.vue'], resolve),
 			meta: {
 				auth: true
 			},
 			name: 'Home'
-		}, //首页
-		
+		}, 
+		{ //相关案例
+			path: '/Case',
+			component: resolve => require(['../pages/Case.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Case'
+		},
+		{//登录
+			path: '/Login',
+			component: resolve => require(['../pages/Login.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Login'
+		}, 
+		{//注册
+			path: '/Register',
+			component: resolve => require(['../pages/Register.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Register'
+		}, 
+		{ //相关权益
+			path: '/Rights',
+			component: resolve => require(['../pages/Rights.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Rights'
+		},
+		{//紧急报警
+			path: '/EmergencyAlarm',
+			component: resolve => require(['../pages/EmergencyAlarm.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'EmergencyAlarm'
+		}
+
 	]
 })
