@@ -42,7 +42,7 @@
                       <router-link to="/UserInfo/info3">相关案例</router-link>
                     </el-menu-item>
                     <el-menu-item index="2-3">
-                      <router-link to="/UserInfo/info2">权益条例</router-link>
+                      <router-link to="/UserInfo/info4">权益条例</router-link>
                     </el-menu-item>
                   </el-menu-item-group>
                 </el-submenu>
@@ -115,7 +115,7 @@ export default {
 .user-box {
   display: block;
   position: absolute;
-  /* margin-top:50px; */
+  margin-top: 20px;
   font-size: 18px;
 }
 .el-header {
@@ -172,9 +172,11 @@ export default {
 }
 .card1 {
   background-color: rgba(215, 0, 15, 1);
+  position: relative;
 }
 .card2 {
   /* background-color: #F2F6FC; */
+  position: relative;
 }
 .router-link .el-menu-item {
   background-color: #f2f6fc;

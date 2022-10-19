@@ -90,7 +90,8 @@ export default new Router({
 			{path: '/UserInfo/info',component: () => import('../components/info.vue')},
             {path: '/UserInfo/info1',component: () => import('../components/info-1.vue')},
             {path: '/UserInfo/info2',component: () => import('../components/info-2.vue')},
-            {path: '/UserInfo/info3',component: () => import('../components/info-3.vue')}
+            {path: '/UserInfo/info3',component: () => import('../components/info-3.vue')},
+			{path: '/UserInfo/info4',component: () => import('../components/info-4.vue')}
         ]
 		}
 

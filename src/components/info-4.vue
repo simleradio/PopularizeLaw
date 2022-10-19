@@ -40,7 +40,7 @@
   
   <script>
     export default {
-        name:"UserInfo-4",
+        name:"UserInfo-3",
         beforeRouteEnter:(to,from,next)=>{
             next(vm=>{
                 vm.getData();
@@ -80,7 +80,9 @@
   
   <style scoped>
   .el-card{
-    margin-left: 50px;
+    margin-left: 20px;
+    max-width: 1300px;
+    position: relative;
   }
   .el-button{
     color: rgba(215, 0, 15, 1);

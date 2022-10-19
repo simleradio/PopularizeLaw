@@ -80,9 +80,17 @@
   
   <style scoped>
   .el-card{
-    margin-left: 50px;
+    margin-left: 20px;
+    max-width: 1300px;
+    position: relative;
   }
   .el-button{
     color: rgba(215, 0, 15, 1);
+  }
+  .el-button:hover {
+    background: yellow !important;
+    color: rgba(215, 0, 15, 1) !important;
+    font-weight: bold;
+    border-color: yellow !important;
   }
   </style>

@@ -7,10 +7,6 @@
             </el-table-column>
             <el-table-column prop="lawcategory" label="法律类别" width="180">
             </el-table-column>
-
-            <el-table-column prop="lawcategory" label="法律类别" width="180">
-            </el-table-column>
-
             <el-table-column prop="lawname" label="法律名称" width="180">
             </el-table-column>
             <el-table-column prop="publictime" label="颁布时间" width="180">
@@ -82,6 +78,8 @@
     margin-left: 20px;
     width: 100%;
     max-width: 1300px;
+    position: relative;
+    overflow: auto;
   }
   
   .el-button{
@@ -89,7 +87,7 @@
   }
   .el-button:hover {
     background: yellow !important;
-    color: white !important;
+    color: rgba(215, 0, 15, 1) !important;
     font-weight: bold;
     border-color: yellow !important;
   }
