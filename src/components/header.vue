@@ -60,14 +60,15 @@
 
 .headBack {
 	width: 100%;
-	background: rgba(253, 8, 8, 0.785);
+	background: rgba(215, 0, 15, 1);
 	/*margin-bottom:30px;*/
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
 	position: relative;
-	left: 0;
+	left: 0px;
 	top: -60px;
-	right: 0;
+	right: 0px;
 	z-index: 100;
+	margin-bottom: -20px;/**设置与下一个组件间距 */
 }
 
 
@@ -112,7 +113,7 @@
 }
 
 .headBox .el-menu--horizontal .el-submenu>.el-menu {
-	top: 80px;
+	top: 70px;
 	border: none;
 	padding: 0;
 }

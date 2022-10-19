@@ -26,20 +26,20 @@
                 <el-menu-item index="1">
                   <template slot="title">
                     <i class="el-icon-user-solid"></i>
-                    <router-link to="/UserInfo/info1">基本资料</router-link>
+                    <router-link to="/UserInfo/info1"><span>基本资料</span></router-link>
                   </template>
                 </el-menu-item>
 
                 <el-submenu index="2">
                   <template slot="title"
-                    ><i class="el-icon-star-on"></i>我的收藏</template
+                    ><i class="el-icon-star-on"></i><span>我的收藏</span></template
                   >
                   <el-menu-item-group>
                     <el-menu-item index="2-1">
                       <router-link to="/UserInfo/info2">法律条例</router-link>
                     </el-menu-item>
                     <el-menu-item index="2-2">
-                      <router-link to="/UserInfo/info2">相关案例</router-link>
+                      <router-link to="/UserInfo/info3">相关案例</router-link>
                     </el-menu-item>
                     <el-menu-item index="2-3">
                       <router-link to="/UserInfo/info2">权益条例</router-link>
@@ -49,7 +49,7 @@
 
                 <el-submenu index="3">
                   <template slot="title"
-                    ><i class="el-icon-setting"></i>关于我们</template
+                    ><i class="el-icon-setting"></i><span>关于我们</span></template
                   >
                   <el-menu-item-group>
                     <el-menu-item index="3-1">
@@ -116,10 +116,11 @@ export default {
   display: block;
   position: absolute;
   /* margin-top:50px; */
+  font-size: 18px;
 }
 .el-header {
   color: #333;
-  min-height: 200px;
+  min-height: 210px;
 }
 .el-aside {
   color: #333;
@@ -128,6 +129,40 @@ export default {
 }
 .el-menu {
   background-color: #f2f6fc;
+  /* padding: 10px; */
+}
+.el-menu-item{
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+}
+.el-submenu /deep/ .el-submenu__title{
+  height: 50px;
+  line-height: 50px;
+  font-size: 22px;
+}
+.el-menu-item-group .el-menu-item{
+  font-size: 17px;
+}
+
+.el-menu-item.is-active {
+   background-color: rgba(215, 0, 15, 1) !important;
+   color: yellow ;
+}
+.el-menu-item:hover{
+        border-left:rgba(215, 0, 15, 1) solid 6px !important;
+        background-color: #E2EFF9 !important;
+        color: rgba(215, 0, 15, 1) !important;
+}
+.el-menu-item.is-active span{
+  color: yellow !important;
+}
+.el-submenu.is-active > .el-submenu__title span{
+  color: yellow !important;
+}
+/* icon图标也跟着变 */
+.el-submenu.is-active > .el-submenu__title i {
+  color: yellow !important;
 }
 .el-avatar {
   margin: 15px auto;
@@ -146,11 +181,11 @@ export default {
 }
 .router-link-active {
   text-decoration: none;
-  color: rgba(215, 0, 15, 1);
 }
 
 a {
   text-decoration: none;
+  color: #333;
 }
 </style>
   
