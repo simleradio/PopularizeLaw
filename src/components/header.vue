@@ -1,6 +1,5 @@
 <template>
     <div class="">
-        
         <div class="headBack">
             <div class="headImgBox">
             <div class="scene">
@@ -11,12 +10,6 @@
                     </span>
                 </div>
             </div>
-            <!-- <div class="h-information">
-                <img :src="this.$store.state.themeObj.head_portrait?this.$store.state.themeObj.head_portrait:'/static/img/1.jpg'" alt="">
-                <h2 class="h-description">
-                    {{this.$store.state.themeObj.autograph?this.$store.state.themeObj.autograph:"普法！"}}
-                </h2>
-            </div> -->
         </div>
             <el-row class="container">
                 <el-col :span="24">
@@ -70,12 +63,13 @@
 	background: rgba(253, 8, 8, 0.785);
 	/*margin-bottom:30px;*/
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12), 0 0 6px 0 rgba(0, 0, 0, .04);
-	position: fixed;
+	position: relative;
 	left: 0;
-	top: 0;
+	top: -60px;
 	right: 0;
 	z-index: 100;
 }
+
 
 .headBox li.is-active {
 	/*background: #48456C;*/

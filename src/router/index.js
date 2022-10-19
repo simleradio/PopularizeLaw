@@ -76,6 +76,20 @@ export default new Router({
 				auth: true
 			},
 			name: 'EmergencyAlarm'
+		},
+		{//个人页面
+			path: '/UserInfo',
+			component: resolve => require(['../pages/UserInfo.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'UserInfo',
+        //路由嵌套
+        children:[
+            {path: '/UserInfo/info1',component: () => import('../components/info-1.vue')},
+            {path: '/UserInfo/info2',component: () => import('../components/info-2.vue')},
+            {path: '/UserInfo/info3',component: () => import('../components/info-3.vue')}
+        ]
 		}
 
 	]
