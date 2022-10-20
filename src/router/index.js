@@ -35,7 +35,11 @@ export default new Router({
 			meta: {
 				auth: true
 			},
-			name: 'Home'
+			name: 'Home',
+			children:[
+				{path: '/UserInfo/info',component: () => import('../components/userinfo/info.vue')},
+				{path: '/Home/home-content',component: () => import('../components/home/home-content.vue')},
+			]
 		}, 
 		{ //相关案例
 			path: '/Case',

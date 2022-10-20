@@ -69,7 +69,7 @@
   height: 100vh;
   background: center center no-repeat;
   background-size: 100% 100%;
-  background-image: url("../../static/img/2.jpg");
+  background-image: url("../../static/img/background2.jpg");
   position: fixed;
   left: 0;
   top: 0;
