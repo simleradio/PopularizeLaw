@@ -81,7 +81,7 @@
   
   <script>
 export default {
-  name: "userinfo",
+  name: "user",
   beforeRouteEnter: (to, from, next) => {
     next((vm) => {
       vm.getData();

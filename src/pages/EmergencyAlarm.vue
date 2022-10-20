@@ -1,4 +1,4 @@
-<!-- 首页 -->
+<!-- 紧急报警 -->
 <template>
     <div>
         <sg-navbar></sg-navbar>
@@ -8,7 +8,7 @@
 <script>
 import header from '../components/header.vue'
     export default {
-        name:'Home',
+        name:'EmergencyAlarm',
         data() { //选项 / 数据
             return {
             }

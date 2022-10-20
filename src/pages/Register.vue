@@ -1,3 +1,4 @@
+<!-- 注册 -->
 <template>
   <div class="background">
     <div>

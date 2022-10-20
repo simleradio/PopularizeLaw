@@ -1,3 +1,4 @@
+<!-- 个人主页 -->
 <template>
   <div class="app">
     <sg-navbar></sg-navbar>
@@ -7,7 +8,7 @@
 
 <script>
 import header from "../components/header.vue";
-import user from "../components/user.vue";
+import user from "../components/userinfo/user.vue";
 export default {
   name: "UserInfo",
   data() {

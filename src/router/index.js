@@ -77,6 +77,18 @@ export default new Router({
 			},
 			name: 'EmergencyAlarm'
 		},
+		{//普法教育
+			path: '/Law',
+			component: resolve => require(['../pages/Law.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Law',
+			redirect:'Law/show',
+			children:[
+				{path: '/Law/show',component: () => import('../components/law/show.vue')},
+			]
+		},
 		{//个人页面
 			path: '/UserInfo',
 			component: resolve => require(['../pages/UserInfo.vue'], resolve),
@@ -87,11 +99,11 @@ export default new Router({
 			redirect:'/UserInfo/info',
         //路由嵌套
         children:[
-			{path: '/UserInfo/info',component: () => import('../components/info.vue')},
-            {path: '/UserInfo/info1',component: () => import('../components/info-1.vue')},
-            {path: '/UserInfo/info2',component: () => import('../components/info-2.vue')},
-            {path: '/UserInfo/info3',component: () => import('../components/info-3.vue')},
-			{path: '/UserInfo/info4',component: () => import('../components/info-4.vue')}
+			{path: '/UserInfo/info',component: () => import('../components/userinfo/info.vue')},
+            {path: '/UserInfo/info1',component: () => import('../components/userinfo/info-1.vue')},
+            {path: '/UserInfo/info2',component: () => import('../components/userinfo/info-2.vue')},
+            {path: '/UserInfo/info3',component: () => import('../components/userinfo/info-3.vue')},
+			{path: '/UserInfo/info4',component: () => import('../components/userinfo/info-4.vue')}
         ]
 		}
 

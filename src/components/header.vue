@@ -17,13 +17,15 @@
                     <div class="headBox">
                         <el-menu  class="el-menu-demo" mode="horizontal"  :router="true">
                             <el-menu-item index="/Home"><i class="fa fa-wa fa-home"></i> 首页</el-menu-item>
-                            <el-submenu index="/Share">
+                            <!-- <el-submenu index="/Law">
                                 <template slot="title"><i class="fa fa-wa fa-archive"></i> 普法教育</template>
-                                <!-- <el-menu-item v-for="(item,index) in classListObj" :key="'class1'+index" :index="'/Share?classId='+item.id">{{item.name}}</el-menu-item> -->
-                            </el-submenu>
-                            <el-menu-item index="/Reward"><i class="fa fa-wa fa-cny"></i> 相关案例</el-menu-item>
-                            <el-menu-item index="/Reward"><i class="fa fa-wa fa-cny"></i> 自身权益</el-menu-item>
-                            <el-menu-item index="/Friendslink"><i class="fa fa-wa fa-users"></i>紧急报警</el-menu-item>
+                            </el-submenu> -->
+							<el-menu-item index="/Law">
+                                <template slot="title"><i class="fa fa-wa fa-archive"></i> 普法教育</template>
+                            </el-menu-item>
+                            <el-menu-item index="/Case"><i class="fa fa-wa fa-cny"></i> 相关案例</el-menu-item>
+                            <el-menu-item index="/Rights"><i class="fa fa-wa fa-cny"></i> 自身权益</el-menu-item>
+                            <el-menu-item index="/EmergencyAlarm"><i class="fa fa-wa fa-users"></i>紧急报警</el-menu-item>
     
                             <div class="userInfo">
                                 <div  class="nologin">
