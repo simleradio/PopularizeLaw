@@ -27,7 +27,7 @@
     
                             <div class="userInfo">
                                 <div  class="nologin">
-                                    <a href="javascript:void(0);" >登&emsp;录&ensp;</a>|<a href="javascript:void(0);">&ensp;注&emsp;册</a>
+                                    <router-link to="/Login">登&emsp;录&ensp;</router-link>|<router-link to="/Register">&ensp;注&emsp;册</router-link>
                                 </div>
                                 <div  class="haslogin">
                                     <i class="fa fa-fw fa-user-circle userImg"></i>

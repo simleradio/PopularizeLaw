@@ -8,13 +8,18 @@
         </el-form-item>
 
         <el-form-item prop="username">
-          <label slot="label">&ensp;用&ensp;户&ensp;名</label>
+          <label slot="label">用&ensp;户&ensp;名</label>
           <el-input type="text" placeholder="请输入用户名"></el-input>
         </el-form-item>
 
         <el-form-item prop="tel">
           <label slot="label">&ensp;电&ensp;&ensp;话&ensp;</label>
           <el-input type="text" placeholder="请输入电话号码"></el-input>
+        </el-form-item>
+
+        <el-form-item prop="useridnumber">
+          <label slot="label">身份证号</label>
+          <el-input type="text" placeholder="请输入身份证号码"></el-input>
         </el-form-item>
 
         <el-form-item prop="password">
@@ -29,25 +34,45 @@
         <el-button type="primary"  class="el-btn">注册</el-button>
         <el-button>重置</el-button>
         <el-form-item>
-          <el-button type="info" class="tologin" size="mini">已有账号，去登录</el-button>
+          <el-button type="info" class="tologin" size="mini" @click="toLogin">已有账号，去登录</el-button>
         </el-form-item>
       </el-form>
     </div>
   </div>
 </template>
   
+<script>
+   export default {
+        name: 'Register',
+        data() { 
+          return{
+
+          }
+        },
+        methods:{
+          toLogin:function(){
+            this.$router.replace("/Login");
+          }
+        }
+    }
+</script>
+
 <style scoped>
 .register-box {
   width: 400px;
-  margin: 100px auto;
+  margin: 70px auto;
   border: 1px solid #dcdfe6;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0 0 30px #dcdfe6;
   background: white;
 }
+.el-form-item{
+    margin-bottom: 0px;
+}
 .register-title {
   text-align: center;
+  /* margin-bottom: 10px; */
 }
 .el-btn {
   margin: 20px;

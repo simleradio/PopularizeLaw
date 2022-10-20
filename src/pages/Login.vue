@@ -12,13 +12,29 @@
         <el-button type="primary" class="el-btn">登录</el-button>
         <el-form-item>
           <el-link type="warning" class="forgotpassword" size="mini">忘记密码</el-link>
-          <el-button type="info" class="toregister" size="mini">没有账号，去注册</el-button>
+          <el-button type="info" class="toregister" size="mini" @click="toRegister">没有账号，去注册</el-button>
         </el-form-item>
       </el-form>
     </div>
   </div>
 </template>
   
+<script>
+   export default {
+        name: 'Login',
+        data() { 
+          return{
+            
+          }
+        },
+        methods:{
+          toRegister:function(){
+            this.$router.replace("/Register");
+          }
+        }
+    }
+</script>
+
 <style scoped>
 .login-box {
   width: 400px;
