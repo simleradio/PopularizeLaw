@@ -5,7 +5,6 @@
         <el-table :data="casesList" style="width:60%;margin-left: 450px;" :stripe="true" :highlight-current-row="true" >
             <el-table-column label="案件概述" >
                 <template slot-scope="scope">
-                  <!-- <span v-if="scope.row.caseid==7" style="margin-left:10px;color: red;"><a>{{ scope.row.casesummary }} </a></span> -->
                   <span style="margin-left:10px;">{{ scope.row.casesummary }}</span>
                 </template>
         </el-table-column>

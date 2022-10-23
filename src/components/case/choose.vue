@@ -11,15 +11,9 @@
             >
               <el-card class="card">
 
-                <!-- <template #header>
-                  <div class="card-header">
-                    <span style="font-size:30px;font-weight:bold;">普法教育</span>
-                  </div>
-                </template> -->
-
                 <el-menu-item index="0">
                   <template slot="title">
-                    <router-link to="/law/show1"
+                    <router-link to="/case/show1"
                       ><span>全部</span></router-link
                     >
                   </template>
@@ -27,7 +21,7 @@
 
                 <el-menu-item index="1">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>宪法相关法</span></router-link
                     >
                   </template>
@@ -35,7 +29,7 @@
 
                 <el-menu-item index="2">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>民法商法</span></router-link
                     >
                   </template>
@@ -43,7 +37,7 @@
 
                 <el-menu-item index="3">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>行政法</span></router-link
                     >
                   </template>
@@ -51,7 +45,7 @@
 
                 <el-menu-item index="4">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>经济法</span></router-link
                     >
                   </template>
@@ -59,7 +53,7 @@
 
                 <el-menu-item index="5">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>社会法</span></router-link
                     >
                   </template>
@@ -67,13 +61,13 @@
 
                 <el-menu-item index="6">
                   <template slot="title">
-                    <router-link to="/law/show2"><span>刑法</span></router-link>
+                    <router-link to="/case/show2"><span>刑法</span></router-link>
                   </template>
                 </el-menu-item>
 
                 <el-menu-item index="7">
                   <template slot="title">
-                    <router-link to="/law/show2"
+                    <router-link to="/case/show2"
                       ><span>诉讼与非诉讼法</span></router-link
                     >
                   </template>
@@ -121,9 +115,9 @@ export default {
       this.index=key;
       // localStorage.setItem('index',this.index)
       if(this.index=='0'){
-        this.$router.push({path: "/law/show1"});
+        this.$router.push({path: "/case/show1"});
       }else{
-        this.$router.push({path: "/law/show2?id=" + this.index});
+        this.$router.push({path: "/case/show2?id=" + this.index});
       }
     },
   },

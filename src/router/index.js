@@ -40,14 +40,6 @@ export default new Router({
 				{path: '/UserInfo/info',component: () => import('../components/userinfo/info.vue')},
 				{path: '/Home/home-content',component: () => import('../components/home/home-content.vue')},
 			]
-		}, 
-		{ //相关案例
-			path: '/Case',
-			component: resolve => require(['../pages/Case.vue'], resolve),
-			meta: {
-				auth: true
-			},
-			name: 'Case'
 		},
 		{//登录
 			path: '/Login',
@@ -81,6 +73,19 @@ export default new Router({
 			},
 			name: 'EmergencyAlarm'
 		},
+		{ //相关案例
+			path: '/Case',
+			component: resolve => require(['../pages/Case.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Case',
+			redirect:'Case/show1',
+			children:[
+				{path: '/Case/show1',component: () => import('../components/case/show-1.vue')},
+				{path: '/Case/show2',component: () => import('../components/case/show-2.vue')},
+			]
+		},
 		{//普法教育
 			path: '/Law',
 			component: resolve => require(['../pages/Law.vue'], resolve),
@@ -88,9 +93,10 @@ export default new Router({
 				auth: true
 			},
 			name: 'Law',
-			redirect:'Law/show',
+			redirect:'Law/show1',
 			children:[
-				{path: '/Law/show',component: () => import('../components/law/show.vue')},
+				{path: '/Law/show1',component: () => import('../components/law/show-1.vue')},
+				{path: '/Law/show2',component: () => import('../components/law/show-2.vue')},
 			]
 		},
 		{//个人页面

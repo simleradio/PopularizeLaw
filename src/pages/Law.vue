@@ -23,7 +23,7 @@ import choose from "../components/law/choose.vue";
             choose,
         },
         created() { //生命周期函数
-
+            
         }
     }
 </script>
