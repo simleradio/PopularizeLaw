@@ -1,15 +1,19 @@
 <template>
   <div>
     <el-card>
-      <span style="font-size: 30px; font-weight: bold">普法教育</span>
-      <span style="font-size: 20px; font-weight: bold">&ensp;>&ensp;全部</span>
+      <span style="font-size: 30px; font-weight: bold;line-height: 60px;">普法教育</span>
+      <span style="font-size: 20px; font-weight: bold;line-height: 60px;">&ensp;>&ensp;全部</span>
       <el-table style="width: 100%" size="medium" :data="lawsList">
-        <el-table-column width="900">
+        <el-table-column width="900" label="标题">
           <template slot-scope="scope">
             {{ scope.row.lawname }}
           </template>
         </el-table-column>
-        <el-table-column width="200"> </el-table-column>
+        <el-table-column width="200" label="颁布时间"> 
+             <template slot-scope="scope">
+              {{ scope.row.publictime }}
+            </template>
+            </el-table-column>
       </el-table>
     </el-card>
   </div>

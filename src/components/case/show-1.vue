@@ -1,40 +1,44 @@
 <template>
   <div>
     <el-card>
-      <span style="font-size: 30px; font-weight: bold">普法教育</span>
-      <span style="font-size: 20px; font-weight: bold">&ensp;>&ensp;全部</span>
-      <el-table style="width: 100%" size="medium" :data="lawsList">
-        <el-table-column width="900">
+      <span style="font-size: 30px; font-weight: bold;line-height: 60px;">普法教育</span>
+      <span style="font-size: 20px; font-weight: bold;line-height: 60px;">&ensp;>&ensp;全部</span>
+      <el-table style="width: 100%" size="medium" :data="casesList">
+        <el-table-column width="900" label="标题">
           <template slot-scope="scope">
-            {{ scope.row.lawname }}
+            {{ scope.row.casetitle }}
           </template>
         </el-table-column>
-        <el-table-column width="200"> </el-table-column>
+        <el-table-column width="200"  label="">
+          <!-- <template slot-scope="scope">
+              {{ scope.row.verdict }}
+            </template> -->
+        </el-table-column>
       </el-table>
     </el-card>
   </div>
 </template>
 
 <script>
-import { findAllLaws } from "../../request/lawRequest";
+import { findAllCases } from "../../request/casesRequest";
 export default {
   name: "show",
   methods: {
-    findAllLaws() {
-      findAllLaws().then((res) => {
-        this.lawsList = res.data;
-        console.log(this.lawsList);
+    findAllCases() {
+      findAllCases().then((res) => {
+        this.casesList = res.data;
+        console.log(this.casesList);
       });
     }
   },
     data() {
       return {
-        lawname: "",
-        lawsList: [],
+        casetitle: "",
+        casesList: [],
       };
     },
     created() {
-      this.findAllLaws();
+      this.findAllCases();
     },
 };
 </script>

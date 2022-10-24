@@ -20,6 +20,7 @@ export default new Router({
 			}
 		}
 	},
+	mode: 'history',
 	routes: [
 		{//首页
 			path: '/',
@@ -37,7 +38,6 @@ export default new Router({
 			},
 			name: 'Home',
 			children:[
-				{path: '/UserInfo/info',component: () => import('../components/userinfo/info.vue')},
 				{path: '/Home/home-content',component: () => import('../components/home/home-content.vue')},
 			]
 		},
@@ -65,6 +65,14 @@ export default new Router({
 			},
 			name: 'Rights'
 		},
+		{//详情
+			path: '/Detail',
+			component: resolve => require(['../pages/Detail.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'Detail'
+		},
 		{//紧急报警
 			path: '/EmergencyAlarm',
 			component: resolve => require(['../pages/EmergencyAlarm.vue'], resolve),
@@ -72,6 +80,14 @@ export default new Router({
 				auth: true
 			},
 			name: 'EmergencyAlarm'
+		},
+		{//修改密码
+			path: '/ChangePwd',
+			component: resolve => require(['../pages/ChangePwd.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'ChangePwd'
 		},
 		{ //相关案例
 			path: '/Case',

@@ -12,6 +12,17 @@ export function findCasesByCondition(casetitle) {
     })
 }
 
+export function findCasesByCasecategory(casecategory) {
+    return request({
+        url:'/backend/Cases/findCasesByCasecategory',
+        method:"post",
+        params: {
+            casecategory:casecategory,
+        }
+    })
+}
+
+
 export function findAllCases(){
     return request({
         url:'backend/Cases/findAllCases',
