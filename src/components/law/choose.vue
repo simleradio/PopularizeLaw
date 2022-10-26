@@ -82,35 +82,12 @@
               <el-card>
                 <el-row style="margin-bottom: 15px;"><i class="el-icon-search">&ensp;搜索</i></el-row>
                 <el-row>
-                <el-col :span="10">查询方式：</el-col>
-                <el-col :span="14">
-                  <el-select
-                    placeholder="请选择查询方式"
-                    @change="getWay()"
-                  >
-                    <el-option
-                      :value="lawcategory"
-                      :label="法律类别"
-                    >法律类别
-                    </el-option>
-                    <el-option
-                      :value="lawname"
-                      :label="法律名称"
-                    >法律名称
-                    </el-option>
-                    <el-option
-                      :value="lawdetail"
-                      :label="法律内容"
-                    >法律类别
-                    </el-option>
-                    <el-option
-                      :value="publictime"
-                      :label="颁布时间"
-                    >法律名称
-                    </el-option>
-                  </el-select>
+                <el-col :span="10" style="line-height:40px; margin-right:-15px">关键词：</el-col>
+                <el-col :span="15">
+                  <input class="el-input__inner" maxlength="50" id="keywords" name="keywords" type="text" v-model="keywords"/>
                 </el-col>
-
+               
+                <input id="submitButton" value="搜索" class="js_button" @click="toSearch()"/>
                
               </el-row>
               </el-card>
@@ -140,6 +117,7 @@ export default {
     return {
       show: false,
       index: "",
+      keywords:''
     };
   },
   methods: {
@@ -162,6 +140,11 @@ export default {
         this.$router.push({ path: "/law/show2?id=" + this.index });
       }
     },
+    toSearch(){
+      //console.log('value='+this.value,'keywords='+this.keywords)
+      window.location.href="../LawSearch?keywords="+this.keywords;
+    }
+    
   },
 
   mounted() {},
@@ -212,6 +195,20 @@ export default {
   margin-top: 20px;
   position: relative;
 }
+.js_button {
+ float:left;
+ text-align:center;
+ font-size:16px;
+ width:100px;
+ height:40px;
+ background-color:#ef0303;
+ color:#fff;
+ cursor:pointer;
+ border-width:0;
+ margin-left:70px;
+ margin-top:20px;
+}
+
 .el-select .el-input__inner:focus{
     border-color: rgba(215, 0, 15, 1);
 }
@@ -250,7 +247,15 @@ export default {
 }
 
 /*修改鼠标选中输入框时输入框的颜色*/
-
+/deep/.el-input.is-active .el-input__inner, .el-input__inner:focus,
+/deep/.el-select .el-input__inner:focus,
+/deep/.el-select:hover .el-input__inner,
+/deep/.el-range-editor.is-active, 
+/deep/.el-range-editor.is-active:hover, 
+/deep/.el-select .el-input.is-focus .el-input__inner
+{
+  border-color: rgba(215, 0, 15, 1) !important;
+}
 
 .router-link .el-menu-item {
   background-color: #f2f6fc;

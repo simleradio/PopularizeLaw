@@ -13,7 +13,7 @@
                 ><a href="/law" title="普法教育">普法教育</a>&nbsp;&gt;&nbsp;<a
                   href="../"
                   title="滚动图片"
-                  >滚动图片</a
+                  >详情页面</a
                 ></span
               >
             </div>

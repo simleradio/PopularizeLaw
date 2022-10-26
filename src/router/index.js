@@ -73,6 +73,14 @@ export default new Router({
 			},
 			name: '/LawDetail'
 		},
+		{//法律搜索
+			path: '/LawSearch',
+			component: resolve => require(['../pages/LawSearch.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: '/LawSearch'
+		},
 		{//案例详情
 			path: '/CaseDetail',
 			component: resolve => require(['../pages/CaseDetail.vue'], resolve),

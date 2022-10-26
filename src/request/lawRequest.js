@@ -13,6 +13,16 @@ export function findLawsByCondition(lawcategory,timeliness) {
     })
 }
 
+export function findLawsByAll(keywords) {
+    return request({
+        url:'/backend/Law/findLawsByAll',
+        method:"post",
+        params: {
+            keywords:keywords,
+        }
+    })
+}
+
 export function findLawsByLawid(lawid){
     return request({
         url:'backend/Law/findLawsByLawid',
