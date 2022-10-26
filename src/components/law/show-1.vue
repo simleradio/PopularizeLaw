@@ -6,10 +6,10 @@
       <el-table style="width: 100%" size="medium" :data="lawsList">
         <el-table-column width="900" label="标题">
           <template slot-scope="scope">
-            {{ scope.row.lawname }}
+            <a :href="'/LawDetail?'+'lawid='+scope.row.lawid" target="_blank">{{ scope.row.lawname }}</a>
           </template>
         </el-table-column>
-        <el-table-column width="200" label="颁布时间"> 
+        <el-table-column width="200" label="公布时间"> 
              <template slot-scope="scope">
               {{ scope.row.publictime }}
             </template>
@@ -55,4 +55,13 @@ export default {
 
 
 <style>
+a {
+  text-decoration: none;
+  color: black;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+  color: black;
+}
 </style>

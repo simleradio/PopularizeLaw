@@ -65,13 +65,21 @@ export default new Router({
 			},
 			name: 'Rights'
 		},
-		{//详情
-			path: '/Detail',
-			component: resolve => require(['../pages/Detail.vue'], resolve),
+		{//法律详情
+			path: '/LawDetail',
+			component: resolve => require(['../pages/LawDetail.vue'], resolve),
 			meta: {
 				auth: true
 			},
-			name: 'Detail'
+			name: '/LawDetail'
+		},
+		{//案例详情
+			path: '/CaseDetail',
+			component: resolve => require(['../pages/CaseDetail.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: '/CaseDetail'
 		},
 		{//紧急报警
 			path: '/EmergencyAlarm',

@@ -6,7 +6,7 @@
       <el-table style="width: 100%" size="medium" :data="casesList">
         <el-table-column width="900" label="标题">
           <template slot-scope="scope">
-            {{ scope.row.casetitle }}
+            <a :href="'/CaseDetail?'+'caseid='+scope.row.caseid" target="_blank">{{ scope.row.casetitle }}</a>
           </template>
         </el-table-column>
         <el-table-column width="200"  label="">
@@ -45,4 +45,13 @@ export default {
 
 
 <style>
+a {
+  text-decoration: none;
+  color: black;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+  color: black;
+}
 </style>

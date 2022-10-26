@@ -11,7 +11,15 @@ export function findCasesByCondition(casetitle) {
         }
     })
 }
-
+export function findCaseByCaseid(caseid){
+    return request({
+        url:'backend/Cases/findCaseByCaseid',
+        method:"post",
+        params:{
+            caseid:caseid,
+        }
+    })
+}
 export function findCasesByCasecategory(casecategory) {
     return request({
         url:'/backend/Cases/findCasesByCasecategory',
