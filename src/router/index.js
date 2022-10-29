@@ -22,9 +22,9 @@ export default new Router({
 	},
 	mode: 'history',
 	routes: [
-		{//首页
+		{//登录
 			path: '/',
-			component: resolve => require(['../pages/Home.vue'], resolve),
+			component: resolve => require(['../pages/Login.vue'], resolve),
 			meta: {
 				auth: true
 			},
@@ -89,6 +89,14 @@ export default new Router({
 			},
 			name: '/CaseDetail'
 		},
+		{//案例搜索
+			path: '/CaseSearch',
+			component: resolve => require(['../pages/CaseSearch.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: '/CaseSearch'
+		},
 		{//紧急报警
 			path: '/EmergencyAlarm',
 			component: resolve => require(['../pages/EmergencyAlarm.vue'], resolve),
@@ -96,6 +104,14 @@ export default new Router({
 				auth: true
 			},
 			name: 'EmergencyAlarm'
+		},
+		{//举报表单
+			path: '/EmergencyAlarm/report',
+			component: resolve => require(['../components/report/reportForm.vue'], resolve),
+			meta: {
+				auth: true
+			},
+			name: 'EmergencyAlarm',
 		},
 		{//修改密码
 			path: '/ChangePwd',
@@ -145,7 +161,8 @@ export default new Router({
             {path: '/UserInfo/info1',component: () => import('../components/userinfo/info-1.vue')},
             {path: '/UserInfo/info2',component: () => import('../components/userinfo/info-2.vue')},
             {path: '/UserInfo/info3',component: () => import('../components/userinfo/info-3.vue')},
-			{path: '/UserInfo/info4',component: () => import('../components/userinfo/info-4.vue')}
+			{path: '/UserInfo/info4',component: () => import('../components/userinfo/info-4.vue')},
+			{path: '/UserInfo/userIntegraiDetail',component: () => import('../components/userinfo/userIntegralDetail.vue')}
         ]
 		}
 

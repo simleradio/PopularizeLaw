@@ -1,7 +1,7 @@
 <template>
     <div>
       <el-card>
-        <span style="font-size: 30px; font-weight: bold;line-height: 60px;">普法教育</span>
+        <span style="font-size: 30px; font-weight: bold;line-height: 60px;">相关案例</span>
         <span style="font-size: 20px; font-weight: bold;line-height: 60px;" v-if="this.$route.query.id==='1'">&ensp;>&ensp;刑事犯罪</span>
         <span style="font-size: 20px; font-weight: bold;line-height: 60px;" v-if="this.$route.query.id==='2'">&ensp;>&ensp;民法犯罪</span>
         <el-table style="width: 100%" size="medium" :data="casesList">

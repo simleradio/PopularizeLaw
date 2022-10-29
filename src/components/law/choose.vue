@@ -141,7 +141,7 @@ export default {
       }
     },
     toSearch(){
-      //console.log('value='+this.value,'keywords='+this.keywords)
+      //console.log('keywords='+this.keywords)
       window.location.href="../LawSearch?keywords="+this.keywords;
     }
     

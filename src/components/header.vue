@@ -24,10 +24,10 @@
                                 <template slot="title"><i class="fa fa-wa fa-archive"></i> 普法教育</template>
                             </el-menu-item>
                             <el-menu-item index="/Case"><i class="fa fa-wa fa-cny"></i> 相关案例</el-menu-item>
-                            <el-menu-item index="/Rights"><i class="fa fa-wa fa-cny"></i> 自身权益</el-menu-item>
+                            <!-- <el-menu-item index="/Rights"><i class="fa fa-wa fa-cny"></i> 自身权益</el-menu-item> -->
                             <el-menu-item index="/EmergencyAlarm"><i class="fa fa-wa fa-users"></i>紧急报警</el-menu-item>
     
-                            <div class="userInfo">
+                            <!-- <div class="userInfo">
                                 <div  class="nologin">
                                     <router-link to="/Login">登&emsp;录&ensp;</router-link>|<router-link to="/Register">&ensp;注&emsp;册</router-link>
                                 </div>
@@ -42,7 +42,10 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
+							<div class="userInfo">
+								<router-link to="/UserInfo">个人中心</router-link>
+							</div>
                         </el-menu>
                     </div>
                 </el-col>

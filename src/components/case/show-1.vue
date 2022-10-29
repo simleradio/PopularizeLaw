@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-card>
-      <span style="font-size: 30px; font-weight: bold;line-height: 60px;">普法教育</span>
+      <span style="font-size: 30px; font-weight: bold;line-height: 60px;">相关案例</span>
       <span style="font-size: 20px; font-weight: bold;line-height: 60px;">&ensp;>&ensp;全部</span>
       <el-table style="width: 100%" size="medium" :data="casesList">
         <el-table-column width="900" label="标题">

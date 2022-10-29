@@ -30,6 +30,15 @@ export function findCasesByCasecategory(casecategory) {
     })
 }
 
+export function findCasesByAll(keywords) {
+    return request({
+        url:'/backend/Cases/findCasesByAll',
+        method:"post",
+        params: {
+            keywords:keywords,
+        }
+    })
+}
 
 export function findAllCases(){
     return request({

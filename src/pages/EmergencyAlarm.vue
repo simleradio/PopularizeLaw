@@ -2,11 +2,13 @@
 <template>
     <div>
         <sg-navbar></sg-navbar>
+        <reportAttention></reportAttention>
     </div>
 </template>
 
 <script>
 import header from '../components/header.vue'
+import reportAttention from '../components/report/reportAttention.vue'
     export default {
         name:'EmergencyAlarm',
         data() { //选项 / 数据
@@ -18,6 +20,7 @@ import header from '../components/header.vue'
         },
         components: { //定义组件
             'sg-navbar':header,
+            'reportAttention':reportAttention,
         },
         created() { //生命周期函数
 

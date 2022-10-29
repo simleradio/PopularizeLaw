@@ -12,7 +12,7 @@
             <span
               ><a href="/law" title="普法教育">普法教育</a>&nbsp;&gt;&nbsp;<a
                 href="../"
-                title="滚动图片"
+                title="搜索页面"
                 >搜索页面</a
               ></span
             >
@@ -82,7 +82,7 @@
 import header from "../components/header.vue";
 import { findLawsByAll } from "../request/lawRequest";
 export default {
-  name: "EmergencyAlarm",
+  name: "LawSearch",
   data() {
     //选项 / 数据
     return {
@@ -199,6 +199,15 @@ export default {
   transform: scale(1.03);
   background-color: #f5f5f5;
   cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ 
+.router-link-active {
+  text-decoration: none;
+  color: black;
 }
 </style>
   

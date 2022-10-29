@@ -24,7 +24,7 @@
 
       <el-form-item prop="usergender">
         <label slot="label">&ensp;性&ensp;&ensp;别&ensp;</label>
-        <el-select v-model="usergender" style="margin-top:10pmex;margin-left: -60px;" >
+        <el-select v-model="usergender" style="margin-top:10Px;margin-left: -60px;" >
           <el-option v-for="item in usergenderlist" :key="item.id" :label="item.value" :value="item.id"></el-option>
         </el-select>
       </el-form-item>
@@ -69,7 +69,6 @@ export default {
           id:'2'
         }],
 
-      
     }
   },
   methods: {

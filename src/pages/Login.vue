@@ -9,7 +9,7 @@
         <el-form-item label="密码" prop="password">
           <el-input type="password" placeholder="请输入密码" v-model="userpwd"></el-input>
         </el-form-item>
-        <el-button type="primary" class="el-btn" @click="userLogin(username,userpwd)">登录</el-button>
+        <el-button type="primary" class="el-btn" @click="userLogin(username, userpwd)">登录</el-button>
         <el-form-item>
           <el-link type="warning" class="forgotpassword" size="mini" @click="changePwd()">忘记密码</el-link>
           <el-button type="info" class="toregister" size="mini" @click="toRegister">没有账号，去注册</el-button>
@@ -21,21 +21,26 @@
   
 <script>
 import { userLogin } from '../request/loginRequest'
+import { findUser } from  '../request/userRequest'
+import moment from "moment";
 export default {
   name: "login",
   data() {
     return {
       username: '',
       userpwd: '',
+      userid: '',
+      logintime:'',
     }
   },
   methods: {
     toRegister: function () {
       this.$router.replace("/Register");
     },
-    changePwd:function(){
+    changePwd: function () {
       this.$router.replace("/ChangePwd");
     },
+
     userLogin() {
       if (this.username == '') {
         this.$message({
@@ -52,12 +57,28 @@ export default {
       } else {
         userLogin(this.username, this.userpwd).then(res => {
           if (res.data == 1) {
+            findUser(this.username,this.userpwd).then(res=>{
+              this.userid = res.data[0].userid;
+              console.log(res.data[0].userid)
+              localStorage.setItem('userid',this.userid);
+              // localStorage.getItem('userid');
+              // console.log(this.userid);
+            })
             this.$message({
               type: 'success',
               message: '登录成功!',
             });
             this.$router.push("/home");
-          } else {
+            this.logintime = new Date();
+            var intime = moment(this.logintime).format('YYYY-MM-DD HH:mm:ss')
+            localStorage.setItem('logintime',intime);
+          } else if(res.data == -1){
+            this.$message({
+              type: 'danger',
+              message: '账号处于封禁！'
+            });
+            this.$router.go(0);
+          }else {
             this.$message({
               type: 'danger',
               message: '登录失败!请重新登录！'
@@ -65,14 +86,11 @@ export default {
             this.$router.go(0);
           }
         })
-
       }
-
     },
-
   },
   created() {
-
+    // this.findUser();
 
   }
 }

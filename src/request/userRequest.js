@@ -9,6 +9,16 @@ export function findAllUsers(){
         }
     })
 };
+export function findUser(username,userpwd){
+    return request({
+        url:'/backend/User/findUser',
+        method:"post",
+        params:{
+            username:username,
+            userpwd:userpwd
+        }
+    })
+}
 
 export function findByIdNumber(useridnumber) {
     return request({
@@ -46,6 +56,18 @@ export function unClosureUser(userid) {
         method:"get",
         params:{
             userid:userid,
+        }
+    })
+};
+export function changeUserDetail(userid,userrealname,username,userphone) {
+    return request({
+        url: '/backend/User/changeUserDetail',
+        method:"post",
+        params:{
+            userid:localStorage.getItem('userid'),
+            userrealname:userrealname,
+            username:username,
+            userphone:userphone
         }
     })
 };
